@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane prefHeight="464.0" prefWidth="589.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="killianhalpin.killianassignment.HelloController">
+   <HBox prefHeight="100.0" prefWidth="200.0">
+      <children>
+      <VBox alignment="CENTER" spacing="20.0">
+          <padding>
+              <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+          </padding>
+      </VBox>
+      </children>
+   </HBox>
+   <TabPane prefHeight="464.0" prefWidth="590.0" tabClosingPolicy="UNAVAILABLE">
+     <tabs>
+       <Tab text=" Vaccination Centre">
+         <content>
+           <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                  <children>
+                     <TextField fx:id="txtVC" layoutX="50.0" layoutY="34.0"  promptText="Enter VC name " />
+                   <Button layoutX="96.0" layoutY="339.0" onAction="#addCentreDetails" text="Add VC" />
+                     <TextField fx:id="txtadd1" layoutX="50.0" layoutY="81.0"  promptText="Address Line 1" />
+                     <TextField fx:id="txtadd2" layoutX="50.0" layoutY="126.0"  promptText="Address Line 2" />
+                     <TextField fx:id="txtadd3" layoutX="50.0" layoutY="174.0"  promptText="Address Line 3" />
+                     <TextField fx:id="txteir" layoutX="50.0" layoutY="218.0"  promptText="Eircode" />
+                     <Button layoutX="98.0" layoutY="299.0" mnemonicParsing="false" onAction="#updatecntre" text="Update" />
+                     <Button layoutX="99.0" layoutY="377.0" mnemonicParsing="false" onAction="#deletecentre" text="Delete" />
+                     <TextField fx:id="txtparking" layoutX="51.0" layoutY="262.0"  promptText="Parking Spaces" />
+                     <ListView fx:id="vaccinationCentreListView" layoutX="266.0" onMouseClicked="#choosecentre" prefHeight="435.0" prefWidth="327.0" />
+                     <Button layoutX="184.0" layoutY="299.0" mnemonicParsing="false" onAction="#save" text="save" />
+                     <Button layoutX="184.0" layoutY="339.0" mnemonicParsing="false" onAction="#load" text="load" />
+                     <Button layoutX="24.0" layoutY="390.0" mnemonicParsing="false" onAction="#resetsystem" text="Bomb" />
+                  </children>
+               </AnchorPane>
+         </content>
+            <graphic>
+         
+         
+             <Label fx:id="welcomeText" />
+            </graphic>
+       </Tab>
+       <Tab text="Vaccination Booth">
+         <content>
+           <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                  <children>
+                     <ListView fx:id="boothListView" layoutX="251.0" layoutY="-4.0" onMouseClicked="#choosebooth" prefHeight="438.0" prefWidth="342.0" />
+                     <TextField fx:id="txtboothid" layoutX="37.0" layoutY="33.0"  promptText="Booth ID" />
+                     <TextField fx:id="txtfloor" layoutX="37.0" layoutY="75.0"  promptText="Floor" />
+                     <TextField fx:id="txtaccess" layoutX="37.0" layoutY="121.0"  promptText="Accessability" />
+                     <Button layoutX="85.0" layoutY="301.0" mnemonicParsing="false" onAction="#addBoothDetails" text="Add Booth" />
+                     <Button layoutX="94.0" layoutY="265.0" mnemonicParsing="false" onAction="#updatebooth" text="Update" />
+                     <Button layoutX="96.0" layoutY="334.0" mnemonicParsing="false" onAction="#deletebooth" text="Delete" />
+                     <Button layoutX="187.0" layoutY="265.0" mnemonicParsing="false" onAction="#save" text="Save" />
+                     <Button layoutX="187.0" layoutY="301.0" mnemonicParsing="false" onAction="#load" text="Load" />
+                  </children>
+               </AnchorPane>
+         </content>
+       </Tab>
+       <Tab text="Appointment">
+         <content>
+           <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                  <children>
+                     <ListView fx:id="appointmentListView" layoutX="275.0" layoutY="-2.0" onMouseClicked="#chooseappointment" prefHeight="434.0" prefWidth="315.0" />
+                     <TextField fx:id="txtdate" layoutX="36.0" layoutY="30.0"  promptText="Date and Time" />
+                     <TextField fx:id="txtvactype" layoutX="36.0" layoutY="72.0"  promptText="Vaccination Type" />
+                     <TextField fx:id="txtbatchnum" layoutX="36.0" layoutY="120.0"  promptText="Batch Num" />
+                     <TextField fx:id="txtvaccinator" layoutX="36.0" layoutY="167.0"  promptText="Vaccinator" />
+                     <TextField fx:id="txtpatientpps" layoutX="36.0" layoutY="215.0"  promptText="Patient ID" />
+                     <Button layoutX="85.0" layoutY="313.0" mnemonicParsing="false" onAction="#addappointmentDetails" text="Add" />
+                     <Button layoutX="78.0" layoutY="280.0" mnemonicParsing="false" onAction="#updateappoint" text="Update" />
+                     <Button layoutX="78.0" layoutY="346.0" mnemonicParsing="false" onAction="#deleteappoint" text="Delete" />
+                     <Button layoutX="178.0" layoutY="280.0" mnemonicParsing="false" onAction="#save" text="Save" />
+                     <Button layoutX="173.0" layoutY="321.0" mnemonicParsing="false" onAction="#load" text="Load" />
+                  </children>
+               </AnchorPane>
+         </content>
+       </Tab>
+       <Tab text="Patient ">
+         <content>
+           <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                  <children>
+                     <ListView fx:id="patientListView" layoutX="289.0" prefHeight="444.0" onMouseClicked="#choosePerson" prefWidth="302.0" />
+                     <TextField fx:id="txtpatientID" layoutX="33.0" layoutY="14.0"  promptText="Patient ID" />
+                     <TextField fx:id="txtpatientname" layoutX="34.0" layoutY="50.0"  promptText="Name " />
+                     <TextField fx:id="txtnumber" layoutX="35.0" layoutY="88.0"  promptText="Number" />
+                     <TextField fx:id="txtaddress1" layoutX="35.0" layoutY="125.0"  promptText="Address Line 1" />
+                     <TextField fx:id="txtaddress2" layoutX="36.0" layoutY="168.0"  promptText="Address Line 2" />
+                     <TextField fx:id="txtEircode" layoutX="36.0" layoutY="210.0"  promptText="Eircode" />
+                     <TextField fx:id="dob" layoutX="37.0" layoutY="249.0"  promptText="Date of Birth" />
+                     <TextField fx:id="txtaccessability" layoutX="34.0" layoutY="288.0" onMouseClicked="#choosePerson" promptText="Acessability Issues?" />
+                     <Button layoutX="85.0" layoutY="359.0" mnemonicParsing="false" onAction="#addPatientDetails" text="Add" />
+                     <Button layoutX="75.0" layoutY="325.0" mnemonicParsing="false" onAction="#updatepatient" text="Update " />
+                     <Button layoutX="78.0" layoutY="396.0" mnemonicParsing="false" onAction="#deletepatient" text="Delete" />
+                     <Button layoutX="183.0" layoutY="325.0" mnemonicParsing="false" onAction="#save" text="Save" />
+                     <Button layoutX="183.0" layoutY="372.0" mnemonicParsing="false" onAction="#load" text="Load" />
+                  </children>
+               </AnchorPane>
+         </content>
+       </Tab>
+     </tabs>
+   </TabPane>
+</AnchorPane>
